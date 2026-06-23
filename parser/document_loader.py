@@ -48,11 +48,19 @@ def _load_docx(path: Path) -> str:
         raise DocumentLoadError("DOCX support requires python-docx to be installed.") from exc
 
     document = Document(str(path))
-    paragraphs = [p.text.strip() for p in document.paragraphs if p.text.strip()]
-    text = "\n".join(paragraphs)
+    text_blocks = [_normalize_text(paragraph.text) for paragraph in document.paragraphs]
+    for table in document.tables:
+        for row in table.rows:
+            for cell in row.cells:
+                text_blocks.extend(_normalize_text(paragraph.text) for paragraph in cell.paragraphs)
+    text = "\n".join(block for block in text_blocks if block)
     if not text.strip():
         raise DocumentLoadError(f"No text found in DOCX: {path}")
     return text
+
+
+def _normalize_text(text: str) -> str:
+    return " ".join(text.split())
 
 
 def _load_pdf(path: Path) -> str:
