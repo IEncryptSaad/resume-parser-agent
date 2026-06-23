@@ -1,0 +1,41 @@
+{
+  "name": "Jane Doe",
+  "email": "jane.doe@example.com",
+  "phone": "(555) 123-4567",
+  "skills": [
+    "agile",
+    "aws",
+    "communication",
+    "docker",
+    "etl",
+    "fastapi",
+    "machine learning",
+    "nlp",
+    "pandas",
+    "python",
+    "sql",
+    "streamlit"
+  ],
+  "work_experience": [
+    {
+      "company": "Acme Analytics",
+      "title": "Senior Software Engineer",
+      "dates": "2021 - Present",
+      "description": "Built Python ETL services that processed millions of records per day. Led a small Agile team and improved data quality monitoring."
+    },
+    {
+      "company": "Bright Data Co.",
+      "title": "Data Engineer",
+      "dates": "2018 - 2021",
+      "description": "Developed SQL models, dashboards, and production data pipelines."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Bachelor of Science in Computer Science, State University",
+      "degree": null,
+      "dates": "2014 - 2018",
+      "description": "Bachelor of Science in Computer Science, State University | 2014 - 2018"
+    }
+  ]
+}
