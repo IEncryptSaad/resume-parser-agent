@@ -23,3 +23,15 @@ def test_resume_json_round_trip() -> None:
     resume = ResumeExtractor().extract(text)
     reparsed = parse_resume_json(resume.to_json())
     assert reparsed == resume
+
+
+def test_presentation_designer_does_not_match_present_date_token() -> None:
+    resume = ResumeExtractor().extract(
+        "John Smith\n"
+        "Experience\n"
+        "Presentation Designer at Acme | 2020 - 2024\n"
+    )
+
+    assert resume.work_experience[0].title == "Presentation Designer"
+    assert resume.work_experience[0].company == "Acme"
+    assert resume.work_experience[0].dates == "2020 - 2024"
