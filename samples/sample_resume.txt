@@ -1,0 +1,19 @@
+Jane Doe
+jane.doe@example.com | (555) 123-4567 | San Francisco, CA
+
+Summary
+Product-minded software engineer focused on Python, data pipelines, and practical machine learning systems.
+
+Technical Skills
+Python, SQL, FastAPI, Streamlit, Docker, AWS, Pandas, Machine Learning, NLP, Agile, Communication
+
+Work Experience
+Senior Software Engineer at Acme Analytics | 2021 - Present
+- Built Python ETL services that processed millions of records per day.
+- Led a small Agile team and improved data quality monitoring.
+
+Data Engineer - Bright Data Co. | 2018 - 2021
+- Developed SQL models, dashboards, and production data pipelines.
+
+Education
+Bachelor of Science in Computer Science, State University | 2014 - 2018
